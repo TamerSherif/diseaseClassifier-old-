@@ -15,9 +15,11 @@ Including another URLconf
 
     DO SOME FUNCTIONALITY AT SPECIFIC URLS
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^upload/', include('upload.urls')), #whenever the user requests any page that starts with "upload"
 ]
