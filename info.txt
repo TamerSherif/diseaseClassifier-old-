@@ -1,0 +1,4 @@
+When the server starts up initially it will go to the settings file
+After going to the settings file it will check the installed apps
+it will go to the respective models of the installed apps
+it will fetch all the necessary classes for each model in order to have the proper DB migration
