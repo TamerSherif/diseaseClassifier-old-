@@ -31,12 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #some of these apps require a DB in order to work, ex: admin, auth
+    #each app has DB tables that it requires, when we run python manage.py migrate, which will create the tables needed for each app
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'upload.apps.UploadConfig'
+    #will now go to check the models of the upload app
+    #need to do python manage.py makemigrations upload, in order to migrate the new upload class and create the SQL file/change to db
 ]
 
 MIDDLEWARE = [
