@@ -7,3 +7,6 @@ from django.shortcuts import render
 
 def index(request):
     return HttpResponse("<h1>This is the temp upload webpage</h1>")
+
+def detail(request, upload_id):
+    return HttpResponse("<h2>Details for upload id: " + str(upload_id) + "</h2>")
